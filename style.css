@@ -154,7 +154,9 @@ body.dark .moreinfotxt{
 .content
 {
     /* border: 2px solid red; */
-    background:#eee;
+    background-image: url('https://www.dropbox.com/scl/fi/9s7tf6jb33ofj6xuawq2l/IMG_2301.JPG?rlkey=1ks60v2a1am7eyfcs08s715tv&raw=1');
+    background-attachment: fixed;
+    /* background-repeat: repeat-x; */
     padding-top:15px;
     padding-bottom:15px;
 }
@@ -178,7 +180,7 @@ body.dark .content {
     max-width:150px;
     height:40px;
     margin:5px;
-    /* border: 2px solid red; */
+    border: 2px solid rgb(93, 93, 93);
 
 }
 body.dark .socials div {
