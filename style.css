@@ -326,7 +326,7 @@ center{
     height:100vh;
     display:flex;
     align-items:center;
-    justify-:center;
+    justify-content:center;
     transition:all 1s;
     flex-direction:column;
     color:black;
