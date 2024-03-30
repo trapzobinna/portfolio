@@ -154,15 +154,17 @@ body.dark .moreinfotxt{
 .content
 {
     /* border: 2px solid red; */
-    background-image: url('./IMG_2301.JPG');
+    background-image: url('https://www.dropbox.com/scl/fi/9s7tf6jb33ofj6xuawq2l/IMG_2301.JPG?rlkey=1ks60v2a1am7eyfcs08s715tv&raw=1');
     background-attachment: fixed;
-    /* background-repeat: repeat-x; */
+    background-color: #ddd;
+    background-repeat: repeat-x;
     padding-top:15px;
     padding-bottom:15px;
 }
 body.dark .content {
-    background-image: url('./firefit.jpg');
+    background-image: url('https://www.dropbox.com/scl/fi/yg9atp6bxylk923m1s4hh/firefit.jpg?rlkey=xuzezh36jfi0qbfmnl2rv9grn&raw=1');
     background-repeat: repeat-x;
+    background-color: #333;
     background-attachment: fixed;
     /* background-size: cover; */
     color: #fff; /* Light text color */
