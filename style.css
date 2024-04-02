@@ -154,7 +154,8 @@ body.dark .moreinfotxt{
 .content
 {
     /* border: 2px solid red; */
-    background-image: url('./IMG_2301.JPG');
+    background-image: url('https://www.dropbox.com/scl/fi/o1rzvep0tpehr5bclz9cg/IMG_20240402_090841.jpg?rlkey=r17y14rxd8adkhfiw6eq94alo&raw=1');
+    background-size: contain;
     background-attachment: fixed;
     background-color: #ddd;
     background-repeat: repeat-x;
@@ -162,7 +163,7 @@ body.dark .moreinfotxt{
     padding-bottom:15px;
 }
 body.dark .content {
-    background-image: url('./firefit.jpg');
+    background-image: url('https://www.dropbox.com/scl/fi/hya4t7tqo0h60bultowrd/IMG_20240402_091842.jpg?rlkey=qbt4dyqy8ckuoyza2812nwdae&raw=1');
     background-repeat: repeat-x;
     background-color: #333;
     background-attachment: fixed;
