@@ -228,6 +228,18 @@ body.dark .sociallinks {
 {
     width:100%;
 }
+.morecertis
+{
+    margin:30px;
+    padding:20px;
+    box-shadow:0px 10px 20px rgba(0,0,0,0.1);
+    border-radius:10px;
+    border:1px solid white;
+}
+.morecertis>img
+{
+    width:100%;
+}
 .verification{
     font-size: 12px;
     font-weight: bold;

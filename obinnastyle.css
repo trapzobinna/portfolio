@@ -58,12 +58,17 @@
         /* border: 2px solid blue; */
         height: 970px;
     }
-   .bioname{
+    .hobbiesninterest{
+/* border: 1px solid red; */
+    }
+   .bioname, .hobbiestit{
     color: black;
     margin-left: 10px;
    }
+
 .biovid{
         /* width: 100%; */
+        /* border: 2px solid purple; */
 }
 .walking{
     width: 100%;
@@ -261,6 +266,7 @@
     .create
     {
         margin-top:50px;
+        /* border: 2px solid green; */
     }
     .certis
     {
