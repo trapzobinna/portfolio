@@ -90,7 +90,7 @@ b,h2.t
     /* border: 2px solid red; */
 }
 .right {
-    background-color: white;
+    background-color:  #ddd;
     backdrop-filter:blur(20px);
     width: 0;
     position: fixed;
