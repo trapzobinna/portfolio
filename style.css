@@ -84,10 +84,26 @@ b,h2.t
     -webkit-text-stroke: 0.02em transparent;
 }
 .sidebarcont {
-    position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
     /* border: 2px solid red; */
 }
+.right {
+    /* background: #f5f3f3; */
+    backdrop-filter:blur(10px);
+    width: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100vh;
+    transition: all 0.6s ease-in-out;
+    top: 0;
+    right: -20px;
+    /* border-left: 1px solid #e5e5e5; */
+}
+
 
 #sidebar {
     display: none; /* Sidebar is initially hidden */
@@ -114,8 +130,77 @@ b,h2.t
 
 .material-symbols-outlined {
     cursor: pointer;
+    
     /* Add more styling here to match your button's look */
 }
+.right.show-sidebar {
+    width: 10rem;
+}
+
+.right ul {
+    margin-top: 2rem;
+    margin-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+ul li {
+    align-items: center;
+    margin-bottom: 1rem;
+    font-family: helvetica;
+    list-style: none;
+    transition: all 0.6s linear;
+    text-decoration: none;
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 0;
+    color: black;
+    border-bottom: none;
+    font-size: 15px;
+    /* border: 1px solid green; */
+
+
+}
+
+ul li a i {
+    text-decoration: none;
+    font-size: 1.4rem;
+    position: relative;
+    cursor: pointer;
+    margin-right: 1.2rem;
+    transition: all 0.6s linear;
+}
+
+.item i {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+.right ul li:hover {
+    transform: translateX(-2rem);
+    transition: all 0.1s linear;
+}
+
+.right:hover {
+    background-color: #f5f3f3;
+}
+
+a:hover {
+    color: #003366;
+    font-size: 25px;
+}
+
+li:hover {
+    box-shadow: 5px 5px 5px black;
+    background-color: grey;
+    color: white;
+}
+
 
 /* Dark mode styles */
 body.dark .sidebar-content {

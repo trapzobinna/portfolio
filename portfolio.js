@@ -1,3 +1,20 @@
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOMContentLoaded event fired');
+    const sidebarIcon = document.getElementById('menuButton');
+    const sidebar = document.querySelector('.right');
+
+    sidebarIcon.addEventListener('click', function () {
+        sidebar.classList.toggle('show-sidebar');
+    });
+    document.addEventListener('click', function (event) {
+        if (!sidebar.contains(event.target) && !sidebarIcon.contains(event.target)) {
+            sidebar.classList.remove('show-sidebar');
+        }
+    });
+});
+
+
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const menuButton = document.getElementById("menuButton");
     const sidebarContent = document.getElementById("sidebarContent");
@@ -76,3 +93,6 @@ function change_mode() {
 
 // You might need to move the darkModeToggle click event listener inside the DOMContentLoaded if it does not work as expected outside.
 darkModeToggle.addEventListener("click", change_mode);
+
+
+
