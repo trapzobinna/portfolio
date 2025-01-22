@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             sidebarContent.style.left = '0'; // Show by moving into view
         }
     });
-    
+
     // Close the sidebar if clicking anywhere outside the sidebar
     document.addEventListener("click", (event) => {
         const isClickInside = sidebarContent.contains(event.target) || menuButton.contains(event.target);
@@ -27,16 +27,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 
-    // Confirm skipping the loading screen
-    const skipLoading = confirm("You are visiting my page, please confirm");
-    if (!skipLoading) {
-        window.addEventListener("load", () => {
-            hideLoadingScreen();
-        });
-    } else {
-        loadScreen.style.transition = "none";
+    // Automatically skip loading screen without confirmation
+    window.addEventListener("load", () => {
         hideLoadingScreen();
-    }
+    });
 
     // Function to hide the loading screen
     function hideLoadingScreen() {
@@ -56,10 +50,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         content.classList.toggle("dark2");
         themeIcon.innerHTML = themeIcon.innerHTML !== "light_mode" ? "light_mode" : "dark_mode";
     });
-
-    // Call adjustDropdownPosition to check if adjustment is needed on page load
-    // This might need to be inside a specific event where you know the dropdown is visible
-    // or after a certain action is performed.
 });
 
 function change_mode() {
@@ -74,21 +64,19 @@ function change_mode() {
     }
 }
 
-// You might need to move the darkModeToggle click event listener inside the DOMContentLoaded if it does not work as expected outside.
-darkModeToggle.addEventListener("click", change_mode);
 const bgImages = document.querySelectorAll('.bg-image');
 
 let currentIndex = 0;
 
 function changeBackgroundImage() {
-  // Remove 'show' class from all elements
-  bgImages.forEach(img => img.classList.remove('show'));
-  
-  // Add 'show' class to the current element
-  bgImages[currentIndex].classList.add('show');
-  
-  // Update currentIndex
-  currentIndex = (currentIndex + 1) % bgImages.length;
+    // Remove 'show' class from all elements
+    bgImages.forEach(img => img.classList.remove('show'));
+
+    // Add 'show' class to the current element
+    bgImages[currentIndex].classList.add('show');
+
+    // Update currentIndex
+    currentIndex = (currentIndex + 1) % bgImages.length;
 }
 
 // Initial display
