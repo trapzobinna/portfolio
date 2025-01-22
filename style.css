@@ -27,7 +27,7 @@ body {
 {
     height:55px;
     width:55px;
-    background:white;
+    background: black;
     border-radius:50%;
     padding:2px;
     margin:1px;
@@ -203,6 +203,9 @@ li:hover {
 
 
 /* Dark mode styles */
+body.dark .header-logo > div > img {
+    background: white; /* White circle in dark mode */
+}
 body.dark .sidebar-content {
     background-color: #333; /* Dark background for the dropdown */
     color: #fff; /* Light text color */
