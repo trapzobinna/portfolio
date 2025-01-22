@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Unavailable</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Unavailable</title>
+  <script>
+    // Function to check screen width and redirect back to the main site
+    function checkScreenWidth() {
+      if (window.innerWidth <= 768) {
+        // Redirect back to the main site when screen width is mobile
+        window.location.href = "index.html"; // Replace "index.html" with your main site's file name if different
+      }
+    }
+
+    // Run the check immediately on page load
+    checkScreenWidth();
+
+    // Also listen for window resize events to detect changes dynamically
+    window.addEventListener("resize", checkScreenWidth);
+  </script>
 </head>
 <body>
-    <h1>Sorry, this site is only available on mobile devices right now!</h1>
+  <h1 style="text-align: center; margin-top: 50px;">This site is unavailable on desktop.</h1>
+  <p style="text-align: center;">Please switch to a mobile device to view the site.</p>
 </body>
 </html>
