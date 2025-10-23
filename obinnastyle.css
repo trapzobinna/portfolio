@@ -55,7 +55,7 @@
     {
         margin-top:90px;
         height:calc(100vh - 90px);
-        /* border: 2px solid blue; */
+        border: 2px solid blue;
         height: 970px;
     }
     .hobbiesninterest{
@@ -90,7 +90,7 @@
         background-position: center;
         opacity: 0;
         transition: opacity 2s ease-in-out;
-        background-size: contain;
+        background-size:contain;
       }
       
       .bg-image.show {
@@ -431,161 +431,95 @@
         padding:3px;
         border-radius:50%;
     }
-    /*------------------
-  me Section
----------------------*/
 
-.me-slider .me-item {
-	height: 865px;
-	display: table;
-	width: 100%;
+    .resume-container {
+  display: flex;
+  justify-content: center; /* centers it horizontally */
+  align-items: center;     /* centers it vertically if needed */
+  flex-wrap: wrap;         /* allows it to move if there are multiple items later */
+  padding: 20px;
 }
 
-.me-slider .me-text {
-	display: table-cell;
-	vertical-align: middle;
+/* The button itself */
+#resume {
+  padding: 15px 40px;
+  font-size: 18px;
+  background: linear-gradient(45deg, #00d084, #007bff);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* ===== News Ticker (Fixed & Working) ===== */
+.news {
+  height: 100px;
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
 }
 
-.me-slider .me-text h2 {
-	color: #fff;
-	font-weight: 400;
-	font-size: 60px;
-	margin-bottom: 30px;
-	position: relative;
-	top: -80px;
-	opacity: 0;
+.newsblock {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  height: 100px;
+  width: 30px;
 }
 
-.me-slider .me-text h2 span {
-	color: #ffb320;
+.newsblock2 {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  height: 100px;
+  width: 30px;
 }
 
-.me-slider .me-text p {
-	color: #fff;
-	margin-bottom: 30px;
-	position: relative;
-	position: relative;
-	top: -90px;
-	opacity: 0;
+/* Container */
+.transline {
+  width: 100%;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 0;
 }
 
-.me-slider .me-text .site-btn {
-	position: relative;
-	top: -100px;
-	opacity: 0;
+/* Ticker animation */
+@keyframes ticker-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-.me-slider .owl-item.active .me-item h2,
-.me-slider .owl-item.active .me-item p,
-.me-slider .owl-item.active .me-item .site-btn {
-	top: 0;
-	opacity: 1;
+.ticker {
+  display: flex;
+  width: 200%;
+  animation: ticker-slide 15s linear infinite;
+  align-items: center;
+  gap: 3rem;
 }
 
-.me-slider .owl-item.active .me-item h2 {
-	-webkit-transition: all 0.5s ease 1s;
-	-o-transition: all 0.5s ease 1s;
-	transition: all 0.5s ease 1s;
+/* Pause animation on hover */
+.transline:hover .ticker {
+  animation-play-state: paused;
 }
 
-.me-slider .owl-item.active .me-item p {
-	-webkit-transition: all 0.5s ease 0.8s;
-	-o-transition: all 0.5s ease 0.8s;
-	transition: all 0.5s ease 0.8s;
+.ticker img {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.2));
+  cursor: pointer;
 }
 
-.me-slider .owl-item.active .me-item .site-btn {
-	-webkit-transition: all 0.5s ease 0.6s;
-	-o-transition: all 0.5s ease 0.6s;
-	transition: all 0.5s ease 0.6s;
-}
-
-.me-slider .owl-dots {
-	position: relative;
-	max-width: 1146px;
-	margin: -33px auto 0;
-	top: -67px;
-	z-index: 5;
-}
-
-.me-slider .owl-dots .owl-dot {
-	display: inline-block;
-	margin-right: 13px;
-	width: 33px;
-	height: 33px;
-	font-size: 14px;
-	font-weight: 500;
-	text-align: center;
-	padding-top: 7px;
-	border-radius: 40px;
-	background: #dbe2ec;
-}
-
-.me-slider .owl-dots .owl-dot.active {
-	background: #ffb320;
-}
-/*---------------------
-  Latest News section
------------------------*/
-
-.latest-news-section {
-	overflow: hidden;
-	display: block;
-	clear: both;
-	background: #131313;
-	padding: 24px 0;
-	position: relative;
-}
-
-.ln-title {
-	position: absolute;
-	height: 100%;
-	width: 29%;
-	left: 0;
-	top: 0;
-	text-align: right;
-	padding-top: 24px;
-	padding-right: 66px;
-	font-size: 18px;
-	font-weight: 500;
-	color: #fff;
-	background: #ffb320;
-	z-index: 1;
-}
-
-.news-ticker {
-	width: 71%;
-	float: right;
-	overflow: hidden;
-	display: inline-block;
-}
-
-.news-ticker-contant .nt-item {
-	margin-right: 35px;
-	color: #fff;
-	display: inline-block;
-}
-
-.news-ticker-contant .nt-item span {
-	margin-right: 35px;
-	display: inline-block;
-	text-transform: uppercase;
-	font-size: 12px;
-	font-weight: 500;
-	color: #fff;
-	padding: 4px 20px;
-}
-
-.news-ticker-contant .nt-item span.new {
-	background: #ff205f;
-}
-
-.news-ticker-contant .nt-item span.strategy {
-	background: #4eae60;
-}
-
-.news-ticker-contant .nt-item span.racing {
-	background: #694eae;
+/* Hover zoom and glow */
+.ticker img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.6));
 }
 
 #menuButton {
@@ -597,5 +531,68 @@
 }
 
 
+
+}
+@media (min-width: 769px) {
+     body {
+    font-size: 16px;
+  }
+
+  .header {
+    height: 80px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(30px);
+  }
+
+  .press {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .biography, .hobbiesninterest, .projects {
+    width: 80%;
+    margin: auto;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  #image-container {
+    height: 500px;
+  }
+
+  .bg-image {
+    background-size: cover;
+  }
+
+  h1.tit {
+    font-size: 70px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .header-buttons {
+    transform: none;
+    position: static;
+  }
+
+  #menuButton {
+    display: none; /* hide the mobile hamburger icon */
+  }
+}
+
+/* ---------- Extra large screens (optional) ---------- */
+@media (min-width: 1600px) {
+  .biography, .hobbiesninterest, .projects {
+    width: 60%;
+  }
+
+  h1.tit {
+    font-size: 80px;
+  }
 
 }
