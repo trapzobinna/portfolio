@@ -477,14 +477,19 @@
     background: rgba(122, 122, 122, 0.1);
     padding: 3px;
     border-radius: 50%;
-  }.scroll-top {
+  }
+  .scroll-top {
     position: fixed !important;
-    right: 14px !important;
-    bottom: 10px !important;
+    right: 16px !important;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
     left: auto !important;
     top: auto !important;
-    z-index: 99999 !important;
+    border: 2px solid red;
+    z-index: 999999 !important;
     transform: none !important;
+    background: linear-gradient(180deg, #ffffff, #f3f4f6);
+    border-radius: 50%;
+    pointer-events: auto;
   }
 }
 /* ====== LAPTOPS & DESKTOPS VERSION ====== */
