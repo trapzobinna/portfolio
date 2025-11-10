@@ -84,51 +84,38 @@
     -webkit-background-clip: text;
     -webkit-text-stroke: 0.02em transparent;
   }
-
-  .sidebarcont {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  .right {
+  
+/* Sidebar hidden by default */
+.sidebar-content {
+    position: absolute;
+    top: 60px; /* adjust below header */
+    right: 10px;
     background-color: white;
-    backdrop-filter: blur(20px);
-    width: 0;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    height: 100vh;
-    transition: all 0.6s ease-in-out;
-    top: 0;
-    right: -20px;
-    /* border-left: 1px solid #e5e5e5; */
-  }
-
-  #sidebar {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 150px;
-    width: 200px;
-    overflow-x: hidden;
-    background-color: #f9f9f9; /* Light grey background */
-    z-index: 1;
-  }
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 100;
+}
 
-  .sidebar-content a {
-    color: black;
-    padding: 12px 16px;
+/* Show sidebar when active */
+.sidebar-content.active {
+    display: flex;
+}
+
+/* Links styling */
+.sidebar-content a {
     text-decoration: none;
-    display: block;
-  }
+    color: #333;
+    font-weight: 500;
+}
 
-  .sidebar-content a:hover {
-    background-color: #f1f1f1;
-  } /* Light mode hover effect */
-
+.sidebar-content a:hover {
+    color: #007bff;
+}
   .material-symbols-outlined {
     cursor: pointer;
 }
@@ -557,6 +544,9 @@ body.dark{
   .material-symbols-outlined {
     font-size: 28px;
     cursor: pointer;
+  }
+  .sidebar-content {
+    display: none;
   }
 
   /* --- Intro Section --- */

@@ -77,12 +77,10 @@
     
                             </div> -->
                         </div>
-                        <!-- <div class="sidebar-content" id="sidebarContent">
-                            <a href="../All Test Sites/frontendbootcamp1/social.html">Socials</a>
-                            <a href="/link2">Blog</a>
-                            <a href="/link3">Resume</a> -->
-                            <!-- Add more links as needed -->
-                        <!-- </div> -->
+                         <div class="sidebar-content" id="sidebarContent">
+        <a href="./REPORT.txt" download>Download Resume</a>
+        <!-- Add more links here -->
+    </div>
                     </div>
                     
                     
@@ -278,7 +276,21 @@
 
       scrollTopBtn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
-      });
+      });const menuToggle = document.getElementById('menuButton');
+const sidebar = document.getElementById('sidebarContent');
+
+menuToggle.addEventListener('click', (event) => {
+    event.stopPropagation(); // prevent click from bubbling
+    sidebar.classList.toggle('active');
+});
+
+// Close sidebar if click outside
+document.addEventListener('click', (event) => {
+    if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+        sidebar.classList.remove('active');
+    }
+});
+
     </script>
 </body>
 </html>
