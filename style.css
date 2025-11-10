@@ -484,7 +484,7 @@
     bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
     left: auto !important;
     top: auto !important;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     z-index: 999999 !important;
     transform: none !important;
     background: linear-gradient(180deg, #ffffff, #f3f4f6);
