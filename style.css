@@ -240,7 +240,7 @@
   }
 
   .content {
-    background-image: url("https://www.dropbox.com/scl/fi/o1rzvep0tpehr5bclz9cg/IMG_20240402_090841.jpg?rlkey=r17y14rxd8adkhfiw6eq94alo&raw=1");
+    background-image: url("./teleworker-living-room-office-using-laptop-coding-close-up.jpg");
     background-size: contain;
     background-attachment: fixed;
     background-color: #ddd;
@@ -250,7 +250,7 @@
   }
 
   body.dark .content {
-    background-image: url("https://www.dropbox.com/scl/fi/hya4t7tqo0h60bultowrd/IMG_20240402_091842.jpg?rlkey=qbt4dyqy8ckuoyza2812nwdae&raw=1");
+    background-image: url("./teleworker-living-room-office-using-laptop-coding-close-up.jpg");
     background-repeat: repeat-x;
     background-color: #333;
     background-size: contain;
@@ -477,6 +477,14 @@
     background: rgba(122, 122, 122, 0.1);
     padding: 3px;
     border-radius: 50%;
+  }.scroll-top {
+    position: fixed !important;
+    right: 14px !important;
+    bottom: 10px !important;
+    left: auto !important;
+    top: auto !important;
+    z-index: 99999 !important;
+    transform: none !important;
   }
 }
 /* ====== LAPTOPS & DESKTOPS VERSION ====== */
@@ -486,8 +494,12 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    
   }
-
+  
+body.dark{
+    background-color: #111111;
+}
   /* --- Header --- */
   .header {
     width: 100%;
@@ -505,7 +517,11 @@
     z-index: 999;
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
   }
-
+  body.dark .header{
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(20px);
+    }
   .header-logo > div > img {
     height: 70px;
     width: 70px;
@@ -515,6 +531,9 @@
     background: black;
     /* border: 2px solid blue; */
     padding: 2px;
+  }
+   body.dark .header-logo > div > img {
+    background: white; /* White circle in dark mode */
   }
 
   .header-buttons {
@@ -526,6 +545,9 @@
     gap: 30px;
     /* border: 2px solid green; */
   }
+    body.dark .header-buttons{
+      filter: invert(50);
+    }
 
   .material-symbols-outlined {
     font-size: 28px;
@@ -540,7 +562,9 @@
     text-align: center;
     /* border: 2px solid blue; */
   }
-
+  body.dark .press{
+    background-color: #111111;
+  }
   .press p {
     font-size: 16px;
     line-height: 26px;
@@ -557,6 +581,12 @@
   .tit,
   .t {
     color: transparent;
+    background: linear-gradient(45deg, rgb(49, 230, 121), rgb(48, 150, 255));
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0.02em transparent;
+  }
+  body.dark .tit{
+     color: transparent;
     background: linear-gradient(45deg, rgb(49, 230, 121), rgb(48, 150, 255));
     -webkit-background-clip: text;
     -webkit-text-stroke: 0.02em transparent;
@@ -601,7 +631,7 @@
     padding: 60px 0;
     /* border: 2px solid red; */
     background-repeat: no-repeat;
-    background-image: url("https://www.dropbox.com/scl/fi/hya4t7tqo0h60bultowrd/IMG_20240402_091842.jpg?rlkey=qbt4dyqy8ckuoyza2812nwdae&st=jysvsopa&raw=1");
+    background-image: url("./teleworker-living-room-office-using-laptop-coding-close-up.jpg");
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
@@ -642,7 +672,10 @@
     transition: 0.3s;
     cursor: pointer;
   }
+body.dark .certis{
+      border: 1px solid white;
 
+}
   .certis:hover {
     transform: translateY(-5px);
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
@@ -719,7 +752,7 @@
   }
 
   body.dark .socials div {
-    border: 2px solid black;
+    border: 2px solid white;
   }
 
   .socials > div > span {
@@ -732,6 +765,7 @@
 
   .sociallinks {
     color: white;
+    font-size: 24px;
   }
 
   body.dark .sociallinks {
@@ -864,5 +898,71 @@ top: 40px;    /* border: 2px solid red; */
   100% {
     transform: translate(0px, -40px);
     opacity: 0;
+  }
+}
+  /* Scroll-to-top button container */
+.scroll-top {
+  --size:48px;
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:var(--size);
+  height:var(--size);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(180deg, #ffffff, #f3f4f6);
+  border-radius:999px;
+  box-shadow:0 6px 18px rgba(2,6,23,0.12), 0 1px 0 rgba(255,255,255,0.6) inset;
+  border:1px solid rgba(0,0,0,0.06);
+  cursor:pointer;
+  opacity:0;
+  transform:translateY(12px) scale(.98);
+  pointer-events:none;
+  transition:opacity .28s ease, transform .28s cubic-bezier(.2,.9,.2,1);
+  z-index:1200;
+  /* border: 2px solid red; */
+}
+
+.scroll-top.visible {
+  opacity:1;
+  transform:translateY(0) scale(1);
+  pointer-events:auto;
+}
+
+.scroll-top:focus {
+  outline:none;
+  box-shadow:0 10px 30px rgba(2,6,23,0.18);
+}
+.scroll-top:hover {
+  transform:translateY(-4px) scale(1.02);
+}
+
+/* Arrow SVG animation */
+.arrow {
+  width:22px;
+  height:22px;
+  display:block;
+  transform-origin:center center;
+  animation:float 1.2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform:translateY(0); }
+  50% { transform:translateY(-6px); }
+  100% { transform:translateY(0); }
+}
+
+/* Subtle bounce on press */
+.scroll-top:active .arrow {
+  animation:none;
+  transform:translateY(-2px) scale(.98);
+}
+
+/* Respect user's reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .arrow, .scroll-top {
+    transition:none;
+    animation:none;
   }
 }

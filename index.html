@@ -113,43 +113,34 @@
         </div>
         
         <div class="content">
-        <h1 class="tc">Socials:</h1>
+        <h1 class="tc">Languages:</h1>
         <div class="socials">
-            <a href="https://instagram.com/1x.obinna">
             <div id="insta">
                     
 
-                <img src="https://www.dropbox.com/scl/fi/r9nq6mw2si9yy81o3yk8f/logo-ig-png-32464.png?rlkey=tb7s0rxzlwxxn25yj9emr6mpv&raw=1" class="w50px"> 
-        <span class="sociallinks">instagram</span>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w50px"> 
+        <span class="sociallinks">HTML5</span>
             </div>
-        </a>
-        <a href="https://grabify.link/profile.php?id=MZLHQ3.html">
             <div id="spot">
-                <img src="https://www.dropbox.com/scl/fi/v0t5m5t9m1d34o89b11en/spotify-logo-png-7081.png?rlkey=89bcuns22adeyvcmzzd7u36wg&raw=1" class="w50px">
-                <span class="sociallinks">spotify</span>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w50px">
+                <span class="sociallinks">CSS3</span>
             </div>
-            </a>
-            <a href="https://twitter.com/obinnaisgang?t=X4Ypvpq4335UbZXfk1e1_A&s=09">
             <div id="x">
-                <img id="ximg" src="https://www.dropbox.com/scl/fi/6aukofuy6ck1fktkzmvc0/twitter-x-logo-42562.png?rlkey=cet61jvxi0qdrvwo4a89sni4u&raw=1" class="w50px">
-                <span class="sociallinks">twitter</span>
+                <img id="ximg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w50px">
+                <span class="sociallinks">JavaScript</span>
 
             </div>
-        </a>
-        <a href="https://www.pinterest.com/trapzobinna/">
+        
 
             <div id="pin">
-                <img src="https://www.dropbox.com/scl/fi/jk7n7bp7vqx75nkwqp2x0/pinterest-logo-png-2012.png?rlkey=zsrdvxnytn2yy9srstgvlc806&raw=1" class="w50px">
-                <span class="sociallinks">pinterest</span>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w50px">
+                <span class="sociallinks">Java</span>
             </div>
-            </a>
 
-            <a href="https://www.linkedin.com/in/obinna-okeke-48b6632b7">
             <div>
-                <img src="https://www.dropbox.com/scl/fi/u77hihy8ukjo5qe6v823r/IMG_6237.PNG?rlkey=zdoslh7an2dy0vny9yygboann&raw=1" class="w50px">
-                <span class="sociallinks">LinkedIn</span>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="w50px">
+                <span class="sociallinks">C++</span>
             </div>
-            </a>
             <br />
             <br />
             <!-- <h2 class="t">Thanks!</h2> -->
@@ -233,7 +224,6 @@
         </div>
        
 
-        <script src="./portfolio.js"></script>
         <script>
             function noti(){
             alert("This place is under construction!")
@@ -245,6 +235,50 @@
             alert("It doesn't actually work yet")
             }
             </script>
-            
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+      <svg
+        class="arrow"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          d="M6.5 13.5L12 8l5.5 5.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <script src="./portfolio.js"></script>
+    <script>
+      function noti() {
+        alert("This place is under construction!");
+      }
+      function changes() {
+        alert("Currently making changes to this part of the website!");
+      }
+      function arrow() {
+        alert("It doesn't actually work yet");
+      }
+
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+          scrollTopBtn.classList.add("visible");
+        } else {
+          scrollTopBtn.classList.remove("visible");
+        }
+      });
+
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
 </body>
 </html>
